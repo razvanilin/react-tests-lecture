@@ -1,25 +1,20 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
-import { mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 
 import Dishes from "./Dishes";
 import dinnerModel from "../data/DinnerModel";
 
-it("renders the Dishes correctly", async () => {
-  const tree = renderer
-    .create(
-      <MemoryRouter>
-        <Dishes />
-      </MemoryRouter>
-    )
-    .toJSON();
+it("renders the Dishes correctly", () => {
+  const tree = shallow(
+    <MemoryRouter>
+      <Dishes />
+    </MemoryRouter>
+  );
 
-  try {
-    await expect(tree).toMatchSnapshot();
-  } catch (e) {
-    throw new Error(e);
-  }
+  expect(tree.find(Dishes)).toMatchSnapshot();
+  tree.unmount();
 });
 
 it("checks the onChange filter function and state changes", () => {
@@ -33,21 +28,6 @@ it("checks the onChange filter function and state changes", () => {
   filterInput.simulate("change", { target: { value: "vanilla" } });
   setTimeout(() => {
     expect(DishesComponent.state().filter).toBe("vanilla");
-  });
-});
-
-it("checks the onChange filter function and state changes", () => {
-  const onChange = jest.fn();
-  const props = { onChange };
-  const DishesComponent = mount(
-    <MemoryRouter>
-      <Dishes />
-    </MemoryRouter>
-  );
-  const filterInput = DishesComponent.find("input");
-
-  filterInput.simulate("change", { target: { value: "vanilla" } });
-  setTimeout(() => {
-    expect(DishesComponent.state().filter).toBe("vanilla");
+    DishesComponent.unmount();
   });
 });

@@ -23,8 +23,8 @@ class Dishes extends Component {
   // this methods is called by React lifecycle when the
   // component is actually shown to the user (mounted to DOM)
   // that's a good place to call the API and get the data
-  componentDidMount() {
-    this.searchUpdate();
+  async componentDidMount() {
+    await this.searchUpdate();
   }
 
   changeFilter(filterInput){
