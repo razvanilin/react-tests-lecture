@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Sidebar component renders correctly 1`] = `
+<div
+  className="Sidebar"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h3>
+        My Dinner
+      </h3>
+    </div>
+    <nav
+      className="navbar navbar-light d-block d-sm-none"
+    >
+      <button
+        aria-controls="navbarToggleExternalContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        className="navbar-toggler"
+        data-target="#collapseMenu"
+        data-toggle="collapse"
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+    </nav>
+  </div>
+  <div
+    className="collapse-xs show"
+    id="collapseMenu"
+  >
+    <p>
+      People:
+      <input
+        onChange={[Function]}
+        type="number"
+        value={1}
+      />
+      <br />
+      Total number of guests: 
+      1
+    </p>
+    <div
+      className="row p-3 mb-2 bg-secondary"
+      id="dishNameCost"
+    >
+      <div
+        className="col"
+      >
+        Dish name
+      </div>
+      <div
+        className="col text-right"
+      >
+        Cost
+      </div>
+    </div>
+  </div>
+  <div
+    className="row text-right text-danger container-fluid"
+  >
+    SEK 0.00
+  </div>
+  <div
+    className="text-center"
+    id="confirmButton"
+  >
+    <a
+      href="/overview"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-lg btn-warning"
+        disabled={true}
+        type="button"
+      >
+        Confirm Dinner
+      </button>
+    </a>
+  </div>
+</div>
+`;

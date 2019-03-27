@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Welcome component renders correctly 1`] = `
+<div
+  className="Welcome"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    />
+    <div
+      className="col-5 text-center"
+    >
+      <div
+        className="welcomeText"
+      >
+        Lorem ipsum dolor sit amet, an mei impetus dissentiunt. Reque mundi no eos, sea lorem eripuit pericula ad, mel aperiam voluptatum in. Mei suas verear instructior ea. Eu has incorrupte instructior.
+      </div>
+      <div
+        className="welcomeButton"
+      >
+        <a
+          href="/search"
+          onClick={[Function]}
+        >
+          <button
+            className="btn btn-warning"
+            type="button"
+          >
+            Create new dinner
+          </button>
+        </a>
+      </div>
+    </div>
+    <div
+      className="col"
+    />
+  </div>
+</div>
+`;

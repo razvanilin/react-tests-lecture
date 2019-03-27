@@ -1,0 +1,12 @@
+#detailBackButton{
+  margin-bottom: 20px;
+}
+
+#ingredientContainer{
+  text-align: right;
+}
+
+#foodPic.resize{
+  width: 450px;
+  height: auto;
+}
