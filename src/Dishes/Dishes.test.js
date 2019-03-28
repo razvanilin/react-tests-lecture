@@ -18,12 +18,13 @@ it("renders the Dishes correctly", () => {
 });
 
 it("checks the onChange filter function and state changes", () => {
-  const DishesComponent = mount(
+  const DishesComponent = shallow(
     <MemoryRouter>
       <Dishes />
     </MemoryRouter>
   );
-  const filterInput = DishesComponent.find("input");
+
+  const filterInput = DishesComponent.find(Dishes).dive().find("input");
 
   filterInput.simulate("change", { target: { value: "vanilla" } });
   setTimeout(() => {
